@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuBrillo | Joyas Personalizadas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">Tu<span>Brillo</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="productos.html">Joyas <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="productos.html#collares">Colgantes</a></li>
+                        <li><a href="productos.html#pulseras">Pulseras</a></li>
+                        <li><a href="productos.html#anillos">Anillos</a></li>
+                        <li><a href="productos.html#pendientes">Pendientes</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="personalizar.html">Personalizar</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">✨ Hecho especialmente para ti</span>
+                <h1>Joyas personalizadas que cuentan <span>tu historia</span></h1>
+                <p>Graba nombres, mensajes, fecha especiales… incluso en árabe. Elige diamantes, grosor y material. Tu joya única, lista en días.</p>
+                <div class="hero-buttons">
+                    <a href="personalizar.html" class="btn btn-primary">Crear mi joya</a>
+                    <a href="productos.html" class="btn btn-outline">Ver colección</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=700&h=500&fit=crop" alt="Joyas personalizadas TuBrillo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="section how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Cómo funciona?</h2>
+                <p>En solo 4 pasos tienes tu joya personalizada</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Elige el tipo</h3>
+                    <p>Collar, pulsera, anillo o pendientes</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Personaliza</h3>
+                    <p>Nombre, texto en árabe, diamantes, grosor…</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Paga seguro</h3>
+                    <p>Tarjeta, PayPal o transferencia</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Recibe</h3>
+                    <p>En 7-12 días laborables</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destacados -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Más populares</h2>
+                <p>Las joyas que más se personalizan este mes</p>
+            </div>
+            <div class="cards-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=280&fit=crop" alt="Collar con nombre">
+                    <div class="product-info">
+                        <h3>Collar con Nombre</h3>
+                        <p>Oro, plata o rosa. Hasta 12 letras + diamante opcional</p>
+                        <div class="price">Desde 49€</div>
+                        <a href="personalizar.html?tipo=collar" class="btn btn-primary">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=280&fit=crop" alt="Pulsera personalizada">
+                    <div class="product-info">
+                        <h3>Pulsera Grabada</h3>
+                        <p>Incluye opción de texto en árabe</p>
+                        <div class="price">Desde 39€</div>
+                        <a href="personalizar.html?tipo=pulsera" class="btn btn-primary">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=280&fit=crop" alt="Anillo con diamante">
+                    <div class="product-info">
+                        <h3>Anillo con Diamante</h3>
+                        <p>Elige grosor, talla y piedra</p>
+                        <div class="price">Desde 79€</div>
+                        <a href="personalizar.html?tipo=anillo" class="btn btn-primary">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Personalización -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>¿Quieres algo único?</h2>
+                <p>Diseña tu joya ahora. Texto en español o árabe, diamantes, grosor y acabado a tu gusto.</p>
+                <a href="personalizar.html" class="btn btn-primary btn-lg">Empezar a personalizar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>TuBrillo</h4>
+                    <p>Joyas personalizadas hechas con cariño. Nombres, mensajes y detalles que duran para siempre.</p>
+                </div>
+                <div>
+                    <h4>Tienda</h4>
+                    <ul class="footer-links">
+                        <li><a href="productos.html">Todas las joyas</a></li>
+                        <li><a href="personalizar.html">Personalizar</a></li>
+                        <li><a href="productos.html#collares">Collares</a></li>
+                        <li><a href="productos.html#pulseras">Pulseras</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Ayuda</h4>
+                    <ul class="footer-links">
+                        <li><a href="nosotros.html">Sobre nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Envíos y devoluciones</a></li>
+                        <li><a href="#">Guía de tallas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> hola@tubrillo.com</li>
+                        <li><i class="fas fa-phone"></i> +34 600 123 456</li>
+                        <li><i class="fas fa-map-marker-alt"></i> España</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 TuBrillo. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Tu carrito</h3>
+            <button id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: <span id="cartTotal">0€</span></div>
+            <a href="checkout.html" class="btn btn-primary" style="width:100%; justify-content:center;">Ir a pagar</a>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

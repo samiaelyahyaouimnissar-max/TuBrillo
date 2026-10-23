@@ -1,0 +1,7 @@
+node_modules/
+.env
+.DS_Store
+*.log
+.yarn/
+data/*.db
+data/*.db-*

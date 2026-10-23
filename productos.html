@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyas | TuBrillo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">Tu<span>Brillo</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="has-dropdown">
+                    <a href="productos.html" class="active">Joyas <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#collares">Collares</a></li>
+                        <li><a href="#pulseras">Pulseras</a></li>
+                        <li><a href="#anillos">Anillos</a></li>
+                        <li><a href="#pendientes">Pendientes</a></li>
+                    </ul>
+                </li>
+                <li><a href="personalizar.html">Personalizar</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top:110px;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra colección</h2>
+                <p>Todas las piezas se pueden personalizar con nombre, texto en árabe, diamantes y más</p>
+            </div>
+
+            <!-- Collares -->
+            <h3 id="collares" style="margin:40px 0 24px; font-size:1.6rem; color:var(--primary);">Collares</h3>
+            <div class="cards-grid">
+                <div class="product-card">
+                    <img src="https://i.etsystatic.com/34379934/r/il/628644/4796937795/il_570xN.4796937795_qnr6.jpg" alt="Collar con nombre">
+                    <div class="product-info">
+                        <h3>Collar con Nombre</h3>
+                        <p>Hasta 12 letras · Diamante opcional · Texto en árabe disponible</p>
+                        <div class="price">Desde 45€</div>
+                        <a href="personalizar.html?tipo=collar" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.myka.com/digital-asset/product/sweetheart-necklace-with-engraved-beads-in-gold-plating-55.jpg" alt="Collar corazón">
+                    <div class="product-info">
+                        <h3>Collar Corazón</h3>
+                        <p>Grabado incluido · Oro, plata o rosa</p>
+                        <div class="price">Desde 35€</div>
+                        <a href="personalizar.html?tipo=collar" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://clue-jewelry.com/cdn/shop/files/IMG-2840.jpg?v=1740243824" alt="Collar cadena fina">
+                    <div class="product-info">
+                        <h3>Collar Cadena Fina con accesorio</h3>
+                        <p>Accesorio a elegir · Perfecto para capas</p>
+                        <div class="price">Desde 16€</div>
+                        <a href="personalizar.html?tipo=collar" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pulseras -->
+            <h3 id="pulseras" style="margin:50px 0 24px; font-size:1.6rem; color:var(--primary);">Pulseras</h3>
+            <div class="cards-grid">
+                <div class="product-card">
+                    <img src="https://cdn.onecklace.com/products/1403/product_1403_model_3_730.jpeg">
+                    <div class="product-info">
+                        <h3>Pulsera Grabada</h3>
+                        <p>Texto en español o árabe · Varios grosores</p>
+                        <div class="price">Desde 39€</div>
+                        <a href="personalizar.html?tipo=pulsera" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.myka.com/digital-asset/products/gold-plated-grandma-bracelet-with-engraved-charms-6.jpg" alt="Pulsera con dije">
+                    <div class="product-info">
+                        <h3>Pulsera con Dije</h3>
+                        <p>Añade diamante o piedra · Nombre personalizado</p>
+                        <div class="price">Desde 29€</div>
+                        <a href="personalizar.html?tipo=pulsera" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.aristocrazy.com/cdn/shop/files/J05809-02-1.jpg?v=1786036980" alt="Pulsera rígida">
+                    <div class="product-info">
+                        <h3>Brazalete</h3>
+                        <p>Acabado brillante · Grabado interior disponible</p>
+                        <div class="price">Desde 52€</div>
+                        <a href="personalizar.html?tipo=pulsera" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anillos -->
+            <h3 id="anillos" style="margin:50px 0 24px; font-size:1.6rem; color:var(--primary);">Anillos</h3>
+            <div class="cards-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=280&fit=crop" alt="Anillo con diamante">
+                    <div class="product-info">
+                        <h3>Anillo con Diamante</h3>
+                        <p>Elige talla, grosor y tipo de piedra</p>
+                        <div class="price">Desde 79€</div>
+                        <a href="personalizar.html?tipo=anillo" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1603561596112-0a132b757824?w=400&h=280&fit=crop" alt="Anillo con nombre">
+                    <div class="product-info">
+                        <h3>Anillo con Nombre</h3>
+                        <p>Grabado frontal o interior · Ideal para regalo</p>
+                        <div class="price">Desde 59€</div>
+                        <a href="personalizar.html?tipo=anillo" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1608042314453-ae338d414c46?w=400&h=280&fit=crop" alt="Anillo minimal">
+                    <div class="product-info">
+                        <h3>Anillo Minimal</h3>
+                        <p>Diseño fino · Perfecto para el día a día</p>
+                        <div class="price">Desde 48€</div>
+                        <a href="personalizar.html?tipo=anillo" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pendientes -->
+            <h3 id="pendientes" style="margin:50px 0 24px; font-size:1.6rem; color:var(--primary);">Pendientes</h3>
+            <div class="cards-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=280&fit=crop" alt="Pendientes personalizados">
+                    <div class="product-info">
+                        <h3>Pendientes con Inicial</h3>
+                        <p>Una o dos iniciales · Diamante pequeño opcional</p>
+                        <div class="price">Desde 36€</div>
+                        <a href="personalizar.html?tipo=pendientes" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=400&h=280&fit=crop" alt="Pendientes aro">
+                    <div class="product-info">
+                        <h3>Pendientes Aro</h3>
+                        <p>Grosor a elegir · Acabado brillante</p>
+                        <div class="price">Desde 32€</div>
+                        <a href="personalizar.html?tipo=pendientes" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400&h=280&fit=crop" alt="Pendientes largos">
+                    <div class="product-info">
+                        <h3>Pendientes Largos</h3>
+                        <p>Estilo statement · Personalización disponible</p>
+                        <div class="price">Desde 44€</div>
+                        <a href="personalizar.html?tipo=pendientes" class="btn btn-primary" style="width:100%; justify-content:center;">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>TuBrillo</h4>
+                    <p>Joyas personalizadas hechas con cariño.</p>
+                </div>
+                <div>
+                    <h4>Tienda</h4>
+                    <ul class="footer-links">
+                        <li><a href="productos.html">Todas las joyas</a></li>
+                        <li><a href="personalizar.html">Personalizar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Ayuda</h4>
+                    <ul class="footer-links">
+                        <li><a href="nosotros.html">Sobre nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> hola@tubrillo.com</li>
+                        <li><i class="fas fa-phone"></i> +34 600 123 456</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 TuBrillo. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <!-- Cart -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Tu carrito</h3>
+            <button id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: <span id="cartTotal">0€</span></div>
+            <a href="checkout.html" class="btn btn-primary" style="width:100%; justify-content:center;">Ir a pagar</a>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

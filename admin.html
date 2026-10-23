@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | TuBrillo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .admin-wrap { max-width: 1000px; margin: 0 auto; padding: 100px 20px 40px; }
+    .admin-tabs { display: flex; gap: 12px; margin-bottom: 24px; }
+    .admin-tabs button {
+      padding: 10px 20px; border: 1px solid var(--border); background: white;
+      border-radius: 8px; cursor: pointer; font-weight: 600;
+    }
+    .admin-tabs button.active { background: var(--primary); color: white; border-color: var(--primary); }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; }
+    th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    th { background: var(--rose); color: var(--text); }
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; background: #ffe0eb; color: var(--primary); }
+    pre { font-size: 0.75rem; white-space: pre-wrap; max-width: 280px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Tu<span>Brillo</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="/admin" class="active">Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="admin-wrap">
+    <h2 style="margin-bottom:8px;">Panel de administración</h2>
+    <p style="color:var(--text-muted); margin-bottom:24px;">Pedidos y mensajes guardados en la base de datos</p>
+
+    <div class="admin-tabs">
+      <button type="button" class="active" id="tabPedidos">Pedidos</button>
+      <button type="button" id="tabContactos">Contactos</button>
+    </div>
+
+    <div id="panelPedidos">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Cliente</th>
+            <th>Total</th>
+            <th>Items</th>
+            <th>Estado</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyPedidos">
+          <tr><td colspan="6">Cargando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="panelContactos" style="display:none;">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Asunto</th>
+            <th>Mensaje</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyContactos">
+          <tr><td colspan="6">Cargando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const tabPedidos = document.getElementById('tabPedidos');
+    const tabContactos = document.getElementById('tabContactos');
+    const panelPedidos = document.getElementById('panelPedidos');
+    const panelContactos = document.getElementById('panelContactos');
+
+    tabPedidos.addEventListener('click', () => {
+      tabPedidos.classList.add('active');
+      tabContactos.classList.remove('active');
+      panelPedidos.style.display = '';
+      panelContactos.style.display = 'none';
+    });
+    tabContactos.addEventListener('click', () => {
+      tabContactos.classList.add('active');
+      tabPedidos.classList.remove('active');
+      panelContactos.style.display = '';
+      panelPedidos.style.display = 'none';
+    });
+
+    async function cargarPedidos() {
+      const res = await fetch('/api/pedidos');
+      const data = await res.json();
+      const tbody = document.getElementById('tbodyPedidos');
+      if (!data.ok || !data.pedidos.length) {
+        tbody.innerHTML = '<tr><td colspan="6">No hay pedidos todavía</td></tr>';
+        return;
+      }
+      tbody.innerHTML = data.pedidos.map(p => `
+        <tr>
+          <td>${p.id}</td>
+          <td>
+            <strong>${p.nombre}</strong><br>
+            <small>${p.email}</small><br>
+            <small>${p.direccion || ''} ${p.ciudad || ''} ${p.cp || ''}</small>
+          </td>
+          <td><strong>${Number(p.total).toFixed(2)}€</strong></td>
+          <td><pre>${(p.items || []).map(i => `${i.tipo} · ${i.material} · ${i.precio}€`).join('\\n')}</pre></td>
+          <td><span class="badge">${p.estado}</span></td>
+          <td>${p.creado_en}</td>
+        </tr>
+      `).join('');
+    }
+
+    async function cargarContactos() {
+      const res = await fetch('/api/contactos');
+      const data = await res.json();
+      const tbody = document.getElementById('tbodyContactos');
+      if (!data.ok || !data.contactos.length) {
+        tbody.innerHTML = '<tr><td colspan="6">No hay mensajes</td></tr>';
+        return;
+      }
+      tbody.innerHTML = data.contactos.map(c => `
+        <tr>
+          <td>${c.id}</td>
+          <td>${c.nombre}</td>
+          <td>${c.email}</td>
+          <td>${c.asunto || '—'}</td>
+          <td>${c.mensaje}</td>
+          <td>${c.creado_en}</td>
+        </tr>
+      `).join('');
+    }
+
+    cargarPedidos();
+    cargarContactos();
+  </script>
+</body>
+</html>

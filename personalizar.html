@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personalizar Joya | TuBrillo</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container nav">
+
+            <a href="index.html" class="logo">
+                Tu<span>Brillo</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="has-dropdown">
+
+                    <a href="productos.html">
+                        Joyas
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown">
+
+                        <li>
+                            <a href="productos.html#collares">
+                                Collares
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="productos.html#pulseras">
+                                Pulseras
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="productos.html#anillos">
+                                Anillos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="productos.html#pendientes">
+                                Pendientes
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="personalizar.html" class="active">
+                        Personalizar
+                    </a>
+                </li>
+
+                <li>
+                    <a href="nosotros.html">
+                        Nosotros
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- ACCIONES DEL MENÚ -->
+
+            <div class="nav-actions">
+
+                <button
+                    class="cart-btn"
+                    id="cartBtn"
+                    type="button">
+
+                    <i class="fas fa-shopping-bag"></i>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount">
+                        0
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="menu-toggle"
+                    type="button">
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONFIGURADOR ================= -->
+
+    <section
+        class="section"
+        style="padding-top:110px;">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2>
+                    Diseña tu joya
+                </h2>
+
+                <p>
+                    Elige cada detalle. Incluye texto en árabe si lo deseas.
+                </p>
+
+            </div>
+
+
+            <div class="configurator">
+
+
+                <!-- ================= OPCIONES ================= -->
+
+                <div class="config-panel">
+
+
+                    <!-- TIPO DE JOYA -->
+
+                    <div class="form-group">
+
+                        <label for="tipoJoya">
+                            Tipo de joya
+                        </label>
+
+                        <select id="tipoJoya">
+
+                            <option value="collar">
+                                Collar
+                            </option>
+
+                            <option value="pulsera">
+                                Pulsera
+                            </option>
+
+                            <option value="anillo">
+                                Anillo
+                            </option>
+
+                            <option value="pendientes">
+                                Pendientes
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- MATERIAL -->
+
+                    <div class="form-group">
+
+                        <label for="material">
+                            Material
+                        </label>
+
+                        <select id="material">
+
+                            <option value="plata">
+                                Plata 925
+                            </option>
+
+                            <option value="oro">
+                                Oro 18k
+                            </option>
+
+                            <option value="rosa">
+                                Oro Rosa 18k
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- GROSOR -->
+
+                    <div class="form-group">
+
+                        <label for="grosor">
+                            Grosor / Tamaño
+                        </label>
+
+                        <select id="grosor">
+
+                            <option value="fino">
+                                Fino (elegante)
+                            </option>
+
+                            <option
+                                value="medio"
+                                selected>
+                                Medio
+                            </option>
+
+                            <option value="grueso">
+                                Grueso (statement)
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- PIEDRA -->
+
+                    <div class="form-group">
+
+                        <label for="piedra">
+                            Diamante / Piedra
+                        </label>
+
+                        <select id="piedra">
+
+                            <option value="ninguna">
+                                Sin piedra
+                            </option>
+
+                            <option value="circonita">
+                                Circonita
+                            </option>
+
+                            <option value="diamante">
+                                Diamante natural
+                            </option>
+
+                            <option value="zafiro">
+                                Zafiro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- TEXTO -->
+
+                    <div class="form-group">
+
+                        <label for="textoGrabado">
+                            Texto a grabar
+                        </label>
+
+                        <input
+                            type="text"
+                            id="textoGrabado"
+                            placeholder="Ej: María, Te quiero, 12.06.24..."
+                        >
+
+                    </div>
+
+
+                    <!-- ÁRABE -->
+
+                    <div class="form-group">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="usarArabe"
+                            >
+
+                            Quiero el texto en árabe
+
+                        </label>
+
+                    </div>
+
+
+                    <div
+                        class="form-group"
+                        id="arabeGroup"
+                        style="display:none;">
+
+                        <label for="textoArabe">
+                            Texto en árabe
+                            (o déjanos traducirlo)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="textoArabe"
+                            placeholder="اكتب هنا أو déjanos traducirlo"
+                            dir="rtl"
+                        >
+
+                        <small>
+                            Si no sabes árabe, escribe en español
+                            y nosotros lo traducimos.
+                        </small>
+
+                    </div>
+
+
+                    <!-- POSICIÓN -->
+
+                    <div class="form-group">
+
+                        <label for="posicion">
+                            Posición del grabado
+                        </label>
+
+                        <select id="posicion">
+
+                            <option value="frontal">
+                                Frontal
+                            </option>
+
+                            <option value="interior">
+                                Interior (más discreto)
+                            </option>
+
+                            <option value="ambos">
+                                Ambos lados
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- BOTÓN AÑADIR -->
+
+                    <button
+                        class="btn btn-primary"
+                        id="addToCartBtn"
+                        type="button"
+                        style="width:100%; margin-top:20px;">
+
+                        <i class="fas fa-shopping-bag"></i>
+
+                        Añadir al carrito
+
+                    </button>
+
+                </div>
+
+
+                <!-- ================= RESUMEN ================= -->
+
+                <div class="config-summary">
+
+                    <h3>
+                        Tu joya
+                    </h3>
+
+
+                    <div class="summary-box">
+
+                        <p>
+                            <strong>Tipo:</strong>
+
+                            <span id="sumTipo">
+                                Collar
+                            </span>
+                        </p>
+
+
+                        <p>
+                            <strong>Material:</strong>
+
+                            <span id="sumMaterial">
+                                Plata 925
+                            </span>
+                        </p>
+
+
+                        <p>
+                            <strong>Grosor:</strong>
+
+                            <span id="sumGrosor">
+                                Medio
+                            </span>
+                        </p>
+
+
+                        <p>
+                            <strong>Piedra:</strong>
+
+                            <span id="sumPiedra">
+                                Sin piedra
+                            </span>
+                        </p>
+
+
+                        <p>
+                            <strong>Grabado:</strong>
+
+                            <span id="sumTexto">
+                                —
+                            </span>
+                        </p>
+
+
+                        <p
+                            id="sumArabeLine"
+                            style="display:none;">
+
+                            <strong>
+                                Árabe:
+                            </strong>
+
+                            <span
+                                id="sumArabe"
+                                dir="rtl">
+                                —
+                            </span>
+
+                        </p>
+
+
+                        <hr>
+
+
+                        <div class="price-big">
+
+                            Precio estimado:
+
+                            <span id="precioEstimado">
+                                49€
+                            </span>
+
+                        </div>
+
+
+                        <small>
+                            * El precio final se confirma
+                            al añadir al carrito.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                © 2026 TuBrillo.
+                Todos los derechos reservados.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CARRITO ================= -->
+
+    <div
+        class="cart-sidebar"
+        id="cartSidebar">
+
+
+        <!-- CABECERA -->
+
+        <div class="cart-header">
+
+            <h3>
+                Tu carrito
+            </h3>
+
+            <button
+                id="closeCart"
+                type="button">
+
+                <i class="fas fa-times"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTOS DEL CARRITO -->
+
+        <div
+            class="cart-items"
+            id="cartItems">
+
+        </div>
+
+
+        <!-- PIE DEL CARRITO -->
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                Total:
+
+                <span id="cartTotal">
+                    0€
+                </span>
+
+            </div>
+
+
+            <a
+                href="checkout.html"
+                class="btn btn-primary"
+                style="width:100%; justify-content:center;">
+
+                Ir a pagar
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FONDO DEL CARRITO -->
+
+    <div
+        class="cart-overlay"
+        id="cartOverlay">
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/main.js"></script>
+
+
+    <!-- ================= SELECCIONAR TIPO DESDE PRODUCTOS ================= -->
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const parametros = new URLSearchParams(
+                window.location.search
+            );
+
+            const tipo = parametros.get('tipo');
+
+            const tipoJoya =
+                document.getElementById('tipoJoya');
+
+
+            if (tipo && tipoJoya) {
+
+                const opcionesPermitidas = [
+                    'collar',
+                    'pulsera',
+                    'anillo',
+                    'pendientes'
+                ];
+
+
+                if (opcionesPermitidas.includes(tipo)) {
+
+                    tipoJoya.value = tipo;
+
+                    // Actualizar el resumen
+                    // después de seleccionar el tipo.
+
+                    if (typeof actualizarResumen === 'function') {
+                        actualizarResumen();
+                    }
+
+                }
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

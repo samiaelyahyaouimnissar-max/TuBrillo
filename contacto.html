@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | TuBrillo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">Tu<span>Brillo</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="has-dropdown">
+                    <a href="productos.html">Joyas <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="productos.html#collares">Collares</a></li>
+                        <li><a href="productos.html#pulseras">Pulseras</a></li>
+                        <li><a href="productos.html#anillos">Anillos</a></li>
+                        <li><a href="productos.html#pendientes">Pendientes</a></li>
+                    </ul>
+                </li>
+                <li><a href="personalizar.html">Personalizar</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top:110px;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contacto</h2>
+                <p>¿Tienes dudas sobre personalización, envíos o un pedido especial? Escríbenos</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1.3fr; gap:50px; max-width:1000px; margin:0 auto;">
+                <!-- Info -->
+                <div>
+                    <h3 style="margin-bottom:24px;">Datos de contacto</h3>
+                    
+                    <div style="display:flex; gap:16px; margin-bottom:28px;">
+                        <i class="fas fa-envelope" style="color:var(--primary); font-size:1.3rem; margin-top:4px;"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            <span style="color:var(--text-muted);">hola@tubrillo.com</span>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:16px; margin-bottom:28px;">
+                        <i class="fas fa-phone" style="color:var(--primary); font-size:1.3rem; margin-top:4px;"></i>
+                        <div>
+                            <strong>Teléfono / WhatsApp</strong><br>
+                            <span style="color:var(--text-muted);">+34 600 123 456</span>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:16px; margin-bottom:28px;">
+                        <i class="fas fa-clock" style="color:var(--primary); font-size:1.3rem; margin-top:4px;"></i>
+                        <div>
+                            <strong>Horario de atención</strong><br>
+                            <span style="color:var(--text-muted);">Lunes a viernes · 10:00 - 18:00</span>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:16px;">
+                        <i class="fas fa-map-marker-alt" style="color:var(--primary); font-size:1.3rem; margin-top:4px;"></i>
+                        <div>
+                            <strong>Ubicación</strong><br>
+                            <span style="color:var(--text-muted);">España (envíos a toda la península y Canarias)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div style="background:white; border:1px solid var(--border); border-radius:14px; padding:36px;">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Nombre *</label>
+                            <input type="text" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Asunto</label>
+                            <select name="asunto">
+                                <option>Consulta sobre personalización</option>
+                                <option>Estado de mi pedido</option>
+                                <option>Texto en árabe</option>
+                                <option>Pedido especial / mayorista</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Mensaje *</label>
+                            <textarea name="mensaje" rows="5" required placeholder="Cuéntanos qué necesitas..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                            <i class="fas fa-paper-plane"></i> Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">© 2026 TuBrillo. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <!-- Cart -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Tu carrito</h3>
+            <button id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: <span id="cartTotal">0€</span></div>
+            <a href="checkout.html" class="btn btn-primary" style="width:100%; justify-content:center;">Ir a pagar</a>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Formulario de contacto → base de datos
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const payload = Object.fromEntries(formData.entries());
+                const btn = contactForm.querySelector('button[type="submit"]');
+                if (btn) { btn.disabled = true; btn.innerHTML = 'Enviando...'; }
+                try {
+                    const res = await fetch('/api/contacto', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const data = await res.json();
+                    if (!res.ok || !data.ok) throw new Error(data.mensaje || 'Error');
+                    alert('¡Mensaje enviado! Te responderemos lo antes posible.');
+                    contactForm.reset();
+                } catch (err) {
+                    alert('No se pudo enviar el mensaje. Inténtalo de nuevo.');
+                    console.error(err);
+                } finally {
+                    if (btn) {
+                        btn.disabled = false;
+                        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar mensaje';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
